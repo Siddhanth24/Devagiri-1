@@ -1,0 +1,793 @@
+body {
+    font-family: 'Poppins';
+}
+.main-container {
+    background: url("pepper1.png");
+    background-size: cover;
+    background-position: center;  
+    position: relative; 
+    background-repeat: no-repeat;
+    z-index: 0;
+    border-radius: 1.4em; /* Adjust this value for the curve size */
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo h1 {
+        font-family: 'Sacramento', cursive;
+        color: #ffffff;
+        font-size: 2.1em;
+}
+
+nav ul {
+        display: flex;  
+        gap: 0.75em;     
+        padding: 0;     
+        margin: 0;      
+        list-style: none; 
+        
+    }
+nav ul li a {
+        text-decoration: none; /* Removes underline */
+        color: white; /* Makes text white */
+    }
+
+nav ul li {
+        display: inline-block;
+        position: relative; 
+        padding: 0.5em 1em;
+        text-decoration: none;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #000000;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: white;
+        padding: 0.75em 1em;
+        display: block;
+        transition: background-color 0.3s ease;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #000000;
+    }
+
+    nav ul li:hover .dropdown-content {
+        display: block;
+        border-radius: 1em;
+    }
+
+    .divider {
+        position: relative;
+        bottom: 10;
+        left: 0;
+        width: 100%;
+        height: 1px;
+        background-color: rgba(249, 249, 249, 0.2); /* 50% opacity for the dividing line */
+    }
+
+.hero-text {
+    text-align: center;
+    color: #fff;
+    font-size: 2.1em;
+    padding-bottom: 4.125em;
+}
+.hero-text h2{
+    margin-top: 2.8em;
+    font-size: 1.5em;
+    font-weight: Bold;
+    color: rgba(255,226,164,1);
+}
+.hero-text p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+    max-width: 45em; 
+    margin: 0 auto; 
+    font-size: 0.6em;
+}
+
+.transition{
+    background-color: rgba(86,93,66,1);
+    border-radius: 15px;
+    z-index: -1;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    margin-top: -2em;
+   
+}
+.transition h2{
+    color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+
+.products, .product-description, .contact {
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    opacity: 0;  /* Start hidden for animation */
+    animation: fadeIn 1s ease-out forwards;
+}
+
+/* Product Box Styling */
+.product-item {
+    width: 22%;  /* Adjusted for better layout */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #5C4033;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: slideUp 0.8s ease-out forwards;
+}
+
+/* Heading inside product box */
+.product-item h3 {
+    color: rgba(86, 93, 66, 1);
+    background-color: #ffffff;
+    padding: 10px;
+    margin: -10px -10px 10px -10px;
+    border-radius: 10px 10px 0 0;
+    font-weight: bold;
+    word-wrap: break-word; /* Ensures long words wrap */
+    overflow-wrap: break-word;
+}
+
+/* Text inside product box */
+.product-item p {
+    color: white;
+    font-size: 15px;
+    padding: 10px;
+    flex: 1;
+}
+
+/* Hover Effect */
+.product-item:hover {
+    transform: scale(1.05); /* Slight zoom effect */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Slide-up Animation */
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.stats {
+   
+    margin: 20px 0;
+    width: 100%;
+    max-width: 1400px;
+    background-color: #BCBD93;
+}
+
+table, th, td {
+    border: 1px solid #ddd;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.contact{
+    border-radius: 15px;
+    margin-top: -40px; 
+}
+
+.container {
+    display: flex;
+    width: 100%;
+}
+
+.left-panel {
+    width: 40%;
+    background-image: url('Contant_us.png'); /* Ensure this path is correct */
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.left-panel h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.left-panel p {
+    font-size: 1.0rem;
+    margin-bottom: 30px;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-item img {
+    width: 30px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.contact-details {
+    margin-left: 10px;
+}
+
+.contact-details h3 {
+    margin: 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.contact-details p {
+    margin: 5px 0;
+    font-size: 0.8rem;
+    color: white;
+}
+
+.icon {
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.right-panel {
+    width: 60%;
+    background-color: #ffffff;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right-panel input,
+.right-panel textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.right-panel textarea {
+    height: 100px;
+    resize: none;
+}
+
+.right-panel .radio-group {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.right-panel .radio-group label {
+    margin-right: 20px;
+    font-size: 1rem;
+}
+
+.right-panel button {
+    width: 150px;
+    padding: 15px;
+    background-color: #1c2a39;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.right-panel button:hover {
+    background-color: #2b3a4d;
+}
+@media (max-width: 830px) and (min-width: 700px) {
+    body {
+        font-size: 90%;
+    }
+
+    header .logo h1 {
+        font-size: 1.6em; /* Reduce logo text size */
+    }
+
+    nav ul {
+        gap: 0.5em; /* Reduce spacing in nav */
+    }
+
+    .hero-text {
+        font-size: 1.8em;
+        padding-top: 1.5em;
+        padding-bottom: 3em;
+    }
+
+
+    .about {
+        padding: 0.2em 1em;
+    }
+
+    .about_text {
+        font-size: 1.5em;
+    }
+
+    .about_text_1 {
+        font-size: 1.6em;
+    }
+
+    .stats {
+        font-size: 1.5em;
+    }
+
+    .stat-text {
+        font-size: 1.8em;
+    }
+
+    .products {
+        border-radius: 30px 30px 15px 15px;
+    }
+
+    .products-12 {
+        font-size: 1.8em;
+    }
+
+    .product-item h3 {
+        font-size: 1.3em;
+    }
+    .product-item p {
+        font-size: 1em;
+    }
+
+    .transition {
+        padding-top: 3em;
+        padding-bottom: 1.5em;
+    }
+
+    .left-panel h2 {
+        font-size: 1em;
+    }
+
+    .left-panel p,
+    .contact-details h3,
+    .contact-details p {
+        font-size: 0.7rem;
+    }
+
+    .right-panel input,
+    .right-panel textarea {
+        font-size: 0.8rem;
+        padding: 12px;
+        max-width: fit-content;
+    }
+
+    .right-panel button {
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+}
+@media (max-width: 700px) and (min-width: 575px) {
+    body {
+        font-size: 80%; /* Further reduce base font size */
+    }
+
+    header .logo h1 {
+        font-size: 1.2em; /* Decrease logo text size */
+    }
+
+    nav ul {
+        gap: 0.2em; /* Minimize spacing between navigation items */
+    }
+
+    .hero-text {
+        font-size: 1.4em;
+        padding-top: 1em;
+        padding-bottom: 2em;
+    }
+
+    .products {
+        border-radius: 20px 20px 10px 10px;
+    }
+
+    .products-12 {
+        font-size: 1.4em;
+    }
+
+    .product-item {
+        width: 100px;
+    }
+
+    .product-item h3 {
+        font-size: 1em;
+    }
+
+    .product-item img {
+        height: 5.5em; /* Further reduce product image size */
+    }
+
+    .transition {
+        padding-top: 4em;
+        padding-bottom: 2em;
+    }
+
+    .transition p{
+        text-align: center;
+        font-weight: 400;
+        font-size: 0.7em; 
+        max-width: 500px; 
+        margin: 0 auto; 
+    }
+
+    .contact{
+        border-radius: 15px;
+        padding-top: 1em;
+    }
+    
+    .container {
+        display: flex;
+        width: 100%;
+    
+    }
+    
+    .left-panel {
+        width: 40%;
+        background-image: url('/images/Contant_us.png'); /* Ensure this path is correct */
+        background-size: cover;
+        color: white;
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .left-panel h2 {
+        font-size: 1em;
+    }
+    
+    .left-panel p {
+        font-size: 0.7em;
+        margin-bottom: 1em;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-item img {
+        width: 30px;
+        height: 2em;
+        margin-right: 10px;
+    }
+    
+    
+    .contact-details h3 {
+        margin: 0;
+        font-size: 0.8rem;
+    }
+    
+    .contact-details p {
+        margin: 5px 0;
+        font-size: 0.7rem;
+        color: white;
+    }
+    .right-panel .radio-group {
+        display: flex;
+        margin-bottom: 1em;
+    }
+    
+    .right-panel .radio-group label {
+        margin-right: 20px;
+        font-size: 0.5rem;
+        max-width: 5em;
+    }
+
+    .right-panel input,
+    .right-panel textarea {
+        font-size: 0.7rem;
+        padding: 8px;
+        max-width: fit-content;
+   
+    }
+
+    .right-panel button {
+        
+        padding: 8px;
+        font-size: 0.7rem;
+    }
+}
+@media (min-width: 520px) and (max-width: 575px) {
+    body {
+        font-size: 70%; /* Further reduce base font size */
+    }
+
+    header .logo h1 {
+        font-size: 1em; /* Decrease logo text size */
+    }
+
+    nav ul {
+        gap: 0.1em; /* Minimize spacing between navigation items */
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+        padding-top: 0.8em;
+        padding-bottom: 1.8em;
+    }
+    .contact {
+        border-radius: 12px;
+        padding-top: 0.8em;
+    }
+
+    .transition {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+    .transition  h2 {
+        font-size: 1,2em;
+    }
+
+    .transition p{
+        text-align: center;
+        font-weight: 400;
+        font-size: 0.6em; 
+        max-width: 500px; 
+        margin: 0 auto; 
+    }
+
+    .product-item h3 {
+        font-size: 0.8em;
+    }
+    
+    .container {
+        display: flex;
+        width: 100%;
+    }
+    
+    .left-panel {
+        width: 100%;
+        background-image: url('/images/Contant_us.png'); /* Ensure this path is correct */
+        background-size: cover;
+        color: white;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    
+    .left-panel h2 {
+        font-size: 1em;
+    }
+    
+    .left-panel p {
+        font-size: 0.8rem;
+        margin-bottom: 0.8em;
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    
+    .contact-item img {
+        width: 28px;
+        height: 1.8em;
+        margin-right: 8px;
+    }
+    
+    .contact-details h3 {
+        margin: 0;
+        font-size: 0.8rem;
+        font-weight: 600;
+    }
+    
+    .contact-details p {
+        margin: 4px 0;
+        font-size: 0.7rem;
+        color: white;
+    }
+
+    .right-panel .radio-group {
+        display: flex;
+        margin-bottom: 0.8em;
+    }
+    
+    .right-panel .radio-group label {
+        margin-right: 18px;
+        font-size: 0.6rem;
+        max-width: fit-content;
+    }
+
+    .right-panel input,
+    .right-panel textarea {
+        font-size: 0.6rem;
+        padding: 7px;
+        max-width: fit-content;
+    }
+
+    .right-panel button {
+        padding: 7px;
+        font-size: 0.6rem;
+    }
+}
+@media (min-width: 375px) and (max-width: 525px) {
+    body {
+        font-size: 70%; /* Further reduce base font size */
+    }
+
+    header .logo h1 {
+        font-size: 0.7em; /* Decrease logo text size */
+    }
+
+    nav ul {
+        gap: 0.1em; /* Minimize spacing between navigation items */
+        font-size: 0.7em; /* Decrease logo text size */
+    }
+
+    .hero-text {
+        font-size: 1.2em;
+        padding-top: 0.8em;
+        padding-bottom: 1.8em;
+    }
+    .transition {
+        padding-top: 2em;
+        padding-bottom: 2em;
+    }
+
+    .transition  h2 {
+        font-size: 1,2em;
+    }
+        
+    .transition p{
+        text-align: center;
+        font-weight: 400;
+        font-size: 0.4em; 
+        max-width: 500px; 
+        margin: 0 auto; 
+    }
+    
+    /* Product Box Styling */
+    .product-item {
+        padding: 1em;
+    }
+    
+    .product-item h3 {
+        font-size: 0.6em;
+    }
+
+    
+    .stats {
+        width: 100%;
+        max-width: 100%; /* Ensure it doesn't exceed screen width */
+        margin: 10px 0; /* Reduce top/bottom margin */
+        overflow-x: auto; /* Enable scrolling if needed */
+        background-color: #BCBD93;
+    }
+    
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 10px; /* Reduce top margin */
+        font-size: 0.85em; /* Reduce font size */
+    }
+
+    th, td {
+        padding: 6px; /* Reduce padding */
+        font-size: 0.8em; /* Reduce text size */
+        word-break: break-word; /* Prevent content overflow */
+    }
+
+    table, th, td {
+        border: 0.8px solid #ddd; /* Reduce border thickness */
+    }
+
+    /* Ensure table stays inside container */
+    .table-container {
+        width: 100%;
+        overflow-x: auto; /* Allow horizontal scrolling */
+    }
+    .container {
+        display: flex;
+        width: 100%;
+    }
+    
+    .left-panel{
+        width: 20%;
+        border-radius: 15px;
+    }
+    .left-panel h2 {
+        font-size: 1em;
+    }
+    
+    .left-panel p {
+        font-size: 0.9em;
+
+    }
+    
+    .contact-item {
+        display: flex;
+        align-items: center;
+        margin-left: -2em;
+    }
+    
+    .contact-item img {
+        width: 0.8em;
+        height: 0.8em;
+    }
+    
+    .contact-details h3 {
+        font-size: 0.8em;
+    }
+    
+    .contact-details p {
+        font-size: 0.6em;
+    }
+
+    .right-panel .radio-group {
+        display: flex;
+        margin-bottom: 0.8em;
+    }
+    
+    .right-panel .radio-group label {
+        margin-right: 18px;
+        font-size: 0.6rem;
+        max-width: fit-content;
+    }
+
+    .right-panel input,
+    .right-panel textarea {
+        font-size: 0.6rem;
+        padding: 7px;
+        max-width: fit-content;
+    }
+
+    .right-panel button {
+        padding: 7px;
+        font-size: 0.6rem;
+        max-width: fit-content;
+    }
+}
